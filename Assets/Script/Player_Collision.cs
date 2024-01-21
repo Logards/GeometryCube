@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Collision : MonoBehaviour
 {
@@ -11,4 +12,10 @@ public class Player_Collision : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
 }

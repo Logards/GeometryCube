@@ -16,6 +16,7 @@ public class Collectable_Collision : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player.GetComponent<Player_Properties>().point += 1;
+            Destroy(gameObject);
         }
     }
 }
